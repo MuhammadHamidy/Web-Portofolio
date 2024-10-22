@@ -4,25 +4,41 @@
         <meta charset="UTF-8">
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>My Portofolio</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <div>
-                <h1>Muhammad Mu'ammal Hamidy</h1>
-                <p> Selamat datang di website <b>Portofolio</b> saya</p>
+        <header>
+            <a href="default" class="logo">Porto-Hamidy</a>
+            <div class="header-right">
+                <a href="Project">Project</a>
+                <a href="Process">Process</a>
+                <a href="About">About Me</a>
+                <a href="Contact">Contact</a>
             </div>
+        </header> 
+        <section class="profile">
+            <div class="content">
+                <div class="main-profile">
+                    <h1>Hallo, <br>I'm M. Mu'ammal Hamidy</h1>
+                    <p> Selamat datang di website <b>Portofolio</b> saya</p>
+                </div>
+                <div class="img-container">
+                    <img src="fotosaya.JPG" alt="profile" class="profile-img" width="300">
+                </div>
+            </div>
+        </section>
+        <section class="About-Me">
+            <h2>About Me</h2>
+            <p>Saya merupakan mahasiswa <b>Universitas Pertamina</b> yang memiliki ketertarikan di bidang <mark>Software Engineering</mark>. Saya tertarik untuk mengembangkan keterampilan
+                dalam mengembangkan perangkat lunak, terutama dalam mencari solusi yang efisien, scalable,
+                dan inovatif. Saat ini, saya mempelajari berbagai bahasa pemrograman seperti Python, JavaScript, dan Java, serta memperdalam 
+                pemahaman saya tentang pengembangan aplikasi web. Saya sangat antusias dalam mempelajari konsep 
+                algoritma, struktur data, dan desain sistem</p>
+        </section>
 
-            <div>
-                <img src="fotosaya.JPG" alt="profile" width="300">
-                <p>Saya merupakan mahasiswa <b>Universitas Pertamina</b> yang memiliki ketertarikan di bidang <mark>Software Engineering</mark>. Saya tertarik untuk mengembangkan keterampilan
-                     dalam mengembangkan perangkat lunak, terutama dalam mencari solusi yang efisien, scalable,
-                     dan inovatif. Saat ini, saya mempelajari berbagai bahasa pemrograman seperti Python, JavaScript, dan Java, serta memperdalam 
-                     pemahaman saya tentang pengembangan aplikasi web. Saya sangat antusias dalam mempelajari konsep 
-                     algoritma, struktur data, dan desain sistem</p>
-            </div>
-            
-            <div>
-                <h2>Riwayat Pendidikan</h2>
+        <section class="Riwayat-Pend">
+            <h2>Riwayat Pendidikan</h2>
+            <div class="Content-Pend">
                 <ol>
                     <li><h3>2022 - 2024</h3></li>
                     <ul>
@@ -35,9 +51,10 @@
                     </ul>
                 </ol>
             </div>
-
-            <div>
-                <h2>Riwayat Pengalaman Organisasi / Kegiatan</h2>
+        </section>
+        <section class="Pengalaman">
+            <h2>Riwayat Pengalaman Organisasi / Kegiatan</h2>
+            <div class="Content-pengalaman">
                 <table border="1">
                     <tr>
                         <th>No</th>
@@ -61,12 +78,46 @@
                     </tr>
                 </table>
             </div>
-
-            <div>
-                <h2>Kontak Saya</h2>
-                <a href="https://www.instagram.com/hamm_id8/profilecard/?igsh=cDBsaGJ0ZGh0cGlz"><img src="logo ig.png" alt="logo ig" width="100"></a> 
+        </section>
+        <section class="Hobi">
+            <div class="Content-hobby">
+                <div class="vid-container">
+                    <h2>Media</h2>
+                    <video controls width="400" height="300" poster="thumbnail.jpg">
+                        <source src="shortvid.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="music-container">
+                    <audio controls><source src="Lagu Programmer.mp3" type="audio/mpeg"></audio>
+                </div>
             </div>
-
-        </div>
+        </section>
+        <section class="form-saran">
+            <h2>Kotak Saran</h2>
+            <div class="content-saran">
+                <form action="">
+                    <label for="Nama"> Nama : </label>
+                    <input type="text"><br>
+                    <label for="Email">Email :</label>
+                    <input type="email"><br>
+                    <label for="gender">Gender : </label><br>
+                    <input type="checkbox">Laki - Laki
+                    <input type="checkbox">Perempuan <br>
+                    <label for="Profi"> Asal Program Studi :</label><br>
+                    <select name="Prodi" id="Prodi">
+                        <option value="Default">-Pilih Program Studi-</option>
+                        <option value="Komunikasi">Komunikasi</option>
+                        <option value="Ilkomp">Ilmu Komputer</option>
+                    </select>
+                    <input type="submit" value="Kirim">
+                </form>
+            </div>
+        </section>
+        <footer class="kontak">
+            <div class="kontak-content">
+                <h2>Kontak Saya</h2>
+                <a href="https://www.instagram.com/hamm_id8/profilecard/?igsh=cDBsaGJ0ZGh0cGlz"><img src="logo ig.png" alt="logo ig"></a> 
+            </div>
+        </footer>
     </body>
 </html>
