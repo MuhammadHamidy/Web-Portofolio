@@ -1,11 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 10px;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
 header {
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     background-color: white;
     border-bottom: 2px solid black;
     padding: 20px 10px;
+    overflow: hidden;
 }
+
 header a {
-    float: left;
     color: black;
     text-align: center;
     padding: 12px;
@@ -14,30 +34,27 @@ header a {
     line-height: 25px;
     border-radius: 4px;
 }
-.header-right {
-    float: right;
-}
-.header-right a:hover {
-    color: #00bcd4;
-    transform: scale(1.1); 
-}
-header .logo:hover {
-    color: #00bcd4;
-}
+
 header a.logo {
     font-size: 25px;
     font-weight: bold;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin-left: 10px;
-    padding: 0;
-    background-color: #1a1a1a;
-    color: #ffffff;
+
+.header-right {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    gap: 10px;
+    justify-content: flex-end;
 }
+
+.header-right a:hover {
+    color: #00bcd4;
+    transform: scale(1.1); 
+}
+
+header .logo:hover {
+    color: #00bcd4;
+}
+
 .profile {
     max-width: 1200px;
     margin: 0 auto;
@@ -45,24 +62,32 @@ body {
     width: 100%;
     box-sizing: border-box;
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-.main-profile h1::first-line{
+
+.main-profile h1::first-line {
     color: rgb(22, 226, 97);
 }
+
 .content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     margin-top: 50px;
+    gap: 20px;
 }
+
 .img-container {
-    flex: 1;
     text-align: right;
 }
+
 .profile-image {
-    width: 300;
+    width: 300px;
     border-radius: 10px;
 }
+
 .form-saran {
     background-color: rgb(52, 82, 123);
     border-radius: 15px;
@@ -72,12 +97,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .form-saran h2 {
     text-align: center;
     color: #ffffff;
-    margin-bottom: 20px;
 }
 
 .content-saran {
@@ -93,7 +120,7 @@ body {
 }
 
 .content-saran input[type="text"],
-.content-saran input[type="email"]{
+.content-saran input[type="email"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -104,11 +131,13 @@ body {
     border-color: #00bcd4;
     outline: none;
 }
+
 .content-saran input[type="checkbox"] {
     margin-right: 5px;
     transform: scale(1.2);
     cursor: pointer;
 }
+
 .content-saran select {
     width: 100%;
     padding: 10px;
@@ -116,12 +145,30 @@ body {
     background-color: white;
     cursor: pointer;
 }
-.content-saran input[type="submit"]{
+
+.content-saran input[type="submit"] {
     width: 45%;
     padding: 10px;
     font-size: 16px;
-    
+    align-self: center;
+    cursor: pointer;
 }
-.kontak-content img{
+
+.kontak-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kontak-content img {
     width: 60px;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 2px;
+    text-align: center;
+    grid-column: 1 / -1;
+    border-top: 1px solid black;
 }
