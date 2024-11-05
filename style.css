@@ -5,11 +5,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #1a1a1a;
-    color: #ffffff;
+    color: aliceblue;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -20,14 +18,14 @@ header {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     background-color: white;
-    border-bottom: 2px solid black;
-    padding: 20px 10px;
+    border-bottom: 2px solid #000000;
+    padding: 10px 10px;
     overflow: hidden;
 }
 
 header a {
     color: black;
-    text-align: center;
+    text-align: left;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
@@ -38,6 +36,7 @@ header a {
 header a.logo {
     font-size: 25px;
     font-weight: bold;
+    margin-left: 1px;
 }
 
 .header-right {
@@ -57,7 +56,7 @@ header .logo:hover {
 
 .profile {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 40px;
     width: 100%;
     box-sizing: border-box;
@@ -68,7 +67,7 @@ header .logo:hover {
 }
 
 .main-profile h1::first-line {
-    color: rgb(22, 226, 97);
+    color: #16e261;
 }
 
 .content {
@@ -76,99 +75,319 @@ header .logo:hover {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     margin-top: 50px;
-    gap: 20px;
+    gap: 1fr;
 }
 
-.img-container {
+.img-container img {
     text-align: right;
+    border-radius: 5px;
+    margin-left: 400px;
 }
 
 .profile-image {
     width: 300px;
-    border-radius: 10px;
 }
 
-.form-saran {
-    background-color: rgb(52, 82, 123);
-    border-radius: 15px;
+.About-Me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;    
+    gap: 1,5rem;
+    margin-right: 20px;
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+}
+
+.about-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50% ;
+    margin-left: 150px;
+}
+
+.about-text p{
+    text-align: justify;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.about-text h2{
+    font-size: 60px;
+    text-decoration: underline;
+}
+
+.about-text h2 span{
+    color: #16e261;
+    font-style: italic;
+}
+
+.Riwayat-Pend {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Riwayat-Pend h2 {
+    text-align: center;
+    font-size: 50px;
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Riwayat-Pend h2 span {
+    color: #16e261;
+    font-style: italic;
+}
+
+.Riwayat-Pend ol{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    list-style-type: none;
+}
+
+.Content-Pend li h3{
+    font-size: 35px;
+    color: #e67e22;
+   
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.Content-Pend ul {
+    list-style-type: none;
+    margin: 40px;
+    font-size: 25px;
+    color: #16e261;
+}
+
+.Pengalaman {
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto; 
+}
+
+.Pengalaman h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 8px; 
+}
+
+.Pengalaman h2 span {
+    color: #16e261;
+    font-style: italic; 
+}
+
+.Content-pengalaman table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #333;
+    color: aliceblue;
+}
+
+.Content-pengalaman th, .Content-pengalaman td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+.Content-pengalaman th {
+    background-color: #16e261; 
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.Content-pengalaman td:first-child {
+    font-weight: bold;
+    text-align: center;
+    color: #16e261;
+}
+
+.Content-pengalaman td:nth-child(3) {
+    text-align: center;
+    font-style: italic;
+}
+
+#projek {
+    color: aliceblue;
+    margin-bottom: 10rem;
+}
+.judul-projek {
+    text-align: center;
+    font-size: 50px;
+    color: aliceblue;
+    margin-bottom: 80px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 8px; 
+}
+
+.projek h2 span {
+    color: #16e261;
+    font-style: italic;
+}
+
+.project-container {
+    padding: 100px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+
+.project-list div {
+    background-color: transparent;
     padding: 40px;
-    margin: 10px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #16e261 ;
+}
+
+.Hobi {
+    width: 100%;
+    max-width: 700px;
+    margin: 80px auto;
+}
+.Content-hobi {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
-
-.form-saran h2 {
+.Content-hobi h2 {
     text-align: center;
-    color: #ffffff;
-}
-
-.content-saran {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.content-saran label {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: aliceblue;
     font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 5px;
+    text-decoration: underline;
+    text-underline-offset: 8px; 
 }
-
-.content-saran input[type="text"],
-.content-saran input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.content-saran input:focus,
-.content-saran select:focus {
-    border-color: #00bcd4;
-    outline: none;
-}
-
-.content-saran input[type="checkbox"] {
-    margin-right: 5px;
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-.content-saran select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.content-saran input[type="submit"] {
-    width: 45%;
-    padding: 10px;
-    font-size: 16px;
-    align-self: center;
-    cursor: pointer;
-}
-
-.kontak-content {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.kontak-content img {
-    width: 60px;
-}
-
-footer {
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-    padding: 2px;
+.vid-container {
     text-align: center;
-    grid-column: 1 / -1;
-    border-top: 1px solid black;
 }
+
+.vid-container video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #16e261;
+}
+.music-container {
+    text-align: center;
+    width: 100%;
+}
+
+.music-container audio {
+    width: 50%;
+    border-radius: 25px;
+
+    box-shadow: 0 4px 8px #16e261;
+}
+
+.contact-form {
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-left: 31%;
+ 
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+
+.footer {
+    background-color: #414040;
+    color: aliceblue;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 18px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+
+.footer-content a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-content a:hover {
+    color: #16e261;
+}
+

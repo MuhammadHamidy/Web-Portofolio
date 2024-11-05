@@ -5,16 +5,18 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>My Portofolio</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        
     </head>
     <body>
         <header>
             <a href="default" class="logo">Porto-Hamidy</a>
-            <div class="header-right">
+            <nav class="header-right">
                 <a href="Project">Project</a>
                 <a href="Process">Process</a>
                 <a href="About">About Me</a>
                 <a href="Contact">Contact</a>
-            </div>
+            </nav>
         </header> 
         <section class="profile">
             <div class="content">
@@ -27,33 +29,43 @@
                 </div>
             </div>
         </section>
-        <section class="About-Me">
-            <h2>About Me</h2>
-            <p>Saya merupakan mahasiswa <b>Universitas Pertamina</b> yang memiliki ketertarikan di bidang <mark>Software Engineering</mark>. Saya tertarik untuk mengembangkan keterampilan
-                dalam mengembangkan perangkat lunak, terutama dalam mencari solusi yang efisien, scalable,
-                dan inovatif. Saat ini, saya mempelajari berbagai bahasa pemrograman seperti Python, JavaScript, dan Java, serta memperdalam 
-                pemahaman saya tentang pengembangan aplikasi web. Saya sangat antusias dalam mempelajari konsep 
-                algoritma, struktur data, dan desain sistem</p>
+        <section class="About-Me" id="about">
+            <div class="about-img">
+                <img src="profile.png">
+            </div>
+            <div class="about-text">
+                <h2>About <span>Me</span></h2>
+                <p>Saya merupakan mahasiswa <b>Universitas Pertamina</b> yang memiliki ketertarikan di bidang <mark>Software Engineering</mark>. Saya tertarik untuk mengembangkan keterampilan
+                    dalam mengembangkan perangkat lunak, terutama dalam mencari solusi yang efisien, scalable,
+                    dan inovatif. Saat ini, saya mempelajari berbagai bahasa pemrograman seperti Python, JavaScript, dan Java, serta memperdalam 
+                    pemahaman saya tentang pengembangan aplikasi web. Saya sangat antusias dalam mempelajari konsep 
+                    algoritma, struktur data, dan desain sistem</p>
+            </div>
         </section>
 
         <section class="Riwayat-Pend">
-            <h2>Riwayat Pendidikan</h2>
+            <h2>My <span>Education</span></h2>
             <div class="Content-Pend">
                 <ol>
-                    <li><h3>2022 - 2024</h3></li>
-                    <ul>
-                        <li>Universitas Pertamina</li>
-                    </ul>
+                    <div class="pend-pertama">
+                        <li><h3>2019 - 2022</h3></li>
+                        <ul>
+                            <li>SMA Muhammadiyah 2 Sidoarjo</li>
+                        </ul>
+                    </div>
 
-                    <li><h3>2019 - 2022</h3></li>
-                    <ul>
-                        <li>SMA Muhammadiyah 2 Sidoarjo</li>
-                    </ul>
+                    <div class="pend-kedua">
+                        <li><h3>2022 - 2024</h3></li>
+                        <ul>
+                            <li>Universitas Pertamina</li>
+                        </ul>
+                    </div>
                 </ol>
             </div>
+            
         </section>
         <section class="Pengalaman">
-            <h2>Riwayat Pengalaman Organisasi / Kegiatan</h2>
+            <h2>My <span>Experience</span></h2>
             <div class="Content-pengalaman">
                 <table border="1">
                     <tr>
@@ -79,8 +91,27 @@
                 </table>
             </div>
         </section>
+        <section>
+            <div class="projek">
+                <div class="project-container">
+                    <h2 class="judul-projek">My <span>Project</span></h2>
+                    <div class="project-list">
+                        <div>
+                            <h2>HARSHFISH</h2>
+                            <p>HarshFish merupakan suatu permainan bercerita tentang sebuah ikan yang melewati rumput laut
+                                dan ikan tersebut tidak boleh menabrak rumput laut tersebut. projek ini mengimplementasikan 
+                                aljabar linear dan kalkulus dalam pembuatannya dan projek ini juga menjadi syarat lulus mata kuliah 
+                                aljabar linear. projek ini diharapkan dapat menjadi contoh implementasi aljabar linear dalam suatu permainan, 
+                                dan dapat menjadi motivasi untuk menyukai matematika.
+                            </p>
+                            <a href="https://muhammadhamidy.github.io/">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="Hobi">
-            <div class="Content-hobby">
+            <div class="Content-hobi">
                 <div class="vid-container">
                     <h2>Media</h2>
                     <video controls width="400" height="300" poster="thumbnail.jpg">
@@ -92,31 +123,38 @@
                 </div>
             </div>
         </section>
-        <section class="form-saran">
-            <h2>Kotak Saran</h2>
-            <div class="content-saran">
-                <form action="">
-                    <label for="Nama"> Nama : </label>
-                    <input type="text"><br>
-                    <label for="Email">Email :</label>
-                    <input type="email"><br>
-                    <label for="gender">Gender : </label><br>
-                    <input type="checkbox">Laki - Laki
-                    <input type="checkbox">Perempuan <br>
-                    <label for="Profi"> Asal Program Studi :</label><br>
-                    <select name="Prodi" id="Prodi">
-                        <option value="Default">-Pilih Program Studi-</option>
-                        <option value="Komunikasi">Komunikasi</option>
-                        <option value="Ilkomp">Ilmu Komputer</option>
-                    </select>
-                    <input type="submit" value="Kirim">
-                </form>
-            </div>
+
+
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
         </section>
-        <footer class="kontak">
-            <div class="kontak-content">
-                <h2>Kontak Saya</h2>
-                <a href="https://www.instagram.com/hamm_id8/profilecard/?igsh=cDBsaGJ0ZGh0cGlz"><img src="logo ig.png" alt="logo ig"></a> 
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Follow me on social media:</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/hamm_id8/profilecard/?igsh=cDBsaGJ0ZGh0cGlz" target="_blank">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjNJREFUSEvF1UnITWEYB/DfhyLCRlamQiEJkSQskFJfMmS2sTEsFBmKLJTIELKyYCF9hoxRSuykJJIyJpKyYUVW5vfRe+t0Oqd7U7fvrds95x2e///5/5/nPR3aPDraHF+3AYzEVszEeGqJ/MEz3MNxvCkrUpXBBpxAL3zAA7yqkXIyJmIofmATThX3lgGm5IAvsAhvW/QosryBYZiKJ41zZYCrWIAxeN9C8LVJvr34krJdh0cpo+tYUgcQQYN9gBRHD8zDOPzCS9zNc7ezlMMzwCCMqAP4ii5sLEQPfS9iegk0jD2ddP+EwTiDUGA++tUB/MYR7Mgbgvn9zGgb7qBnZn4oV80sRDXFCCJL855/E2UPYuMB7MoHluVD8X+plMHy5NWFZOjCbHAsn0/yxXwQqwUIZjvzejxvR398KwGE1p9TOe9LvuzJayHvqiLxqgyiYbbkAwezXANT44U/xdEA2J96YHdeOIs1zQCO5S6OM1Ful7OuV0oAwTQYFyWK9xXNPChm0DA5SjCkCpOjw+emSjmM15hdMjkA+9R5EDoHi/UFtkOymTMqynQlPhbmo0znICStNDkuq/hVNVow60wV9h23cLPAvBHvMQYkkqPrAIL94lSaY1u8KopJTUj311OcSyRX1wFMSiyDRWwMg9+VZKl7jeDXEF5NyzEqJYrJxnUdBj/MksT8TzxPjdgbo7LZMd8XcQvH+macLLKo+6L9zwfnaNX13m2fzBalb76t7Rn8BcJ+cxlsKeBhAAAAAElFTkSuQmCC"/>
+                    </a>
+                    <a href="https://github.com/MuhammadHamidy" target="_blank">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjBJREFUSEu11UnIjlEUB/DfJ7IhCyRZosxFslCKKGFjKEOKEjKlJGOJZAglkiHsCCXDhh0LC5SIjEWysDAkC1KIPOfrvnW/53uHx+I7m/e99/7P/Z9z7jn/p00XW1sX368VQQ/MxgyMxlDafd7hCW4W+1fwu1GgzQim4SSGtMjyLVbiVj1cI4It2J+irVLFv9iKQ2VwPYLNOFDl1jqYDTiS75cJpqRUYz/quwyrsQPd8CbVezgi6n04gWOYl/Ym4W6NJCfoiecYnA53Y2f6H+/wEd/SuhcG4nVab8fe9P8FxhRB/Yl1TrAAl7L0ItVIuYodxKYMOCtVoAPB+SKixRloIu5VuT1F/DgL+DjWlTOI8ozI0hxZ8fIa7CHGpcWDIoMJZYJP6J8A14tBmvOfBBewKPl8Qb8ywYdisAYkwG1M/U+CG5iZfL6jd5ngEcYmQHRL32YSUCIPSfmMPmn/FaKVOzzyGSzPHFfgbMUsAns6w57DkjJB1PwqviJSjD6P8Q89+tGAKOZhbRq4GMSazcflMkHMRHTSoKI9p2MVluJX6umF+JluiJJcS7juJfKXGJWmupNcz03y+x7j0+BNTlmsKV10EUFatqhEdGG71RO7o1if9GdPkzfYlUlJDXa4kJONuU8juQ5xCy26U4jYUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ+eWyjpNtxPmhW/nazVJzPO45MZMh2Z5DYs9Xo8dkNrRdDMt9JZlxP8A6W4YxlKv0WFAAAAAElFTkSuQmCC"/>
+                    </a>
+                </div>
             </div>
         </footer>
     </body>
